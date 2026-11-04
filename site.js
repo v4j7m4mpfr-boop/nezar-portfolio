@@ -1,14 +1,12 @@
-/* Edit me: contact details and skills. Leave a value as "" to show "coming soon". */
 window.SITE = {
-  email: "",                                   // e.g. "you@example.com"
-  github: "https://github.com/v4j7m4mpfr-boop",
-  instagram: "",                               // e.g. "https://instagram.com/yourname"
+  email: "nezartamer31@gmail.com",
+  instagram: "https://www.instagram.com/nezar.elsawy__/",
   skills: [
     { name: "HTML", note: "Structure and semantics" },
     { name: "CSS", note: "Layout, type and motion" },
-    { name: "JavaScript", note: "Learning by building" },
-    { name: "Responsive design", note: "Mobile first" },
-    { name: "Frontend development", note: "Interfaces that work" },
-    { name: "UI/UX design", note: "Clarity before decoration" }
+    { name: "JavaScript", note: "Interactive interfaces" },
+    { name: "Responsive design", note: "Built for every screen" },
+    { name: "Frontend development", note: "From concept to launch" },
+    { name: "UI/UX design", note: "Clarity meets character" }
   ]
 };

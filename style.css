@@ -19,3 +19,24 @@ footer{display:flex;align-items:center;justify-content:space-between;gap:20px;pa
 /* Editorial dark visual refresh */
 :root{--bg:#10110f;--ink:#f0f0e9;--muted:#999d91;--line:rgba(240,240,233,.17);--lime:#c7f36b;--font:'Space Grotesk',sans-serif}
 body{background:var(--bg);color:var(--ink);font-family:var(--font)}
+
+
+/* Animated personal introduction — opening hero */
+.hero-intro-profile{grid-template-columns:minmax(0,1.25fr) minmax(240px,.75fr);align-items:end;column-gap:7vw;row-gap:0;padding-top:clamp(55px,9vh,115px);padding-bottom:clamp(28px,5vh,65px)}
+.hero-intro-profile .hero-kicker{grid-column:1/-1;margin-bottom:clamp(24px,4vh,48px);animation:fade-rise .8s .12s both}
+.hero-kicker span{color:var(--muted);margin-left:8px}
+.hero-name{font-size:clamp(86px,15.8vw,230px);line-height:.76;letter-spacing:-.105em;font-weight:700;display:flex;flex-direction:column;align-items:flex-start;overflow:visible}
+.hero-name .name-line{display:block;white-space:nowrap;transform:translateY(115%);opacity:0;animation:name-arrive 1.05s cubic-bezier(.16,1,.3,1) forwards}
+.hero-name .name-first{animation-delay:.25s}
+.hero-name .name-last{animation-delay:.42s}
+.hero-name .lime-dot{display:inline-block;color:var(--lime);margin-left:.015em}
+.hero-description{max-width:350px;padding-bottom:6px;animation:fade-rise .9s .85s both}
+.hero-description .hero-role{font-size:10px;letter-spacing:.16em;color:var(--lime);margin-bottom:13px}
+.hero-description .hero-bio{font-size:clamp(13px,1.15vw,16px);line-height:1.85;color:#b7baaf;margin-bottom:24px;max-width:330px}
+@keyframes name-arrive{to{transform:translateY(0);opacity:1}}
+@keyframes fade-rise{from{transform:translateY(18px);opacity:0}to{transform:translateY(0);opacity:1}}
+.hero-wordmark{margin-top:clamp(2vh,4vh,5vh)}
+@media(min-width:761px){.hero-intro-profile{min-height:45vh}.hero-name{font-size:clamp(110px,15.8vw,230px)}}
+@media(max-width:760px){.hero-intro-profile{display:flex;flex-direction:column;align-items:flex-start;gap:0;padding:9vh 0 3vh}.hero-intro-profile .hero-kicker{margin-bottom:28px}.hero-name{font-size:clamp(76px,18vw,132px);line-height:.8}.hero-description{margin-top:32px;max-width:390px;padding:0}.hero-description .hero-role{font-size:9px;margin-bottom:10px}.hero-description .hero-bio{font-size:12px;line-height:1.75;margin-bottom:18px}.hero-wordmark{margin-top:5vh}}
+@media(max-width:390px){.hero-name{font-size:17.4vw}.hero-description{margin-top:25px}}
+@media(prefers-reduced-motion:reduce){.hero-intro-profile .hero-kicker,.hero-name .name-line,.hero-description{animation:none!important;transform:none!important;opacity:1!important}}

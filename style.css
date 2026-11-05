@@ -15,3 +15,7 @@ footer{display:flex;align-items:center;justify-content:space-between;gap:20px;pa
 @media(max-width:390px){.hero-meta span:last-child{font-size:7px}.hero-foot{letter-spacing:.08em}.wordmark-base,.wordmark-reveal{font-size:13.8vw}.project-info{align-items:flex-start}.project-type{white-space:normal;text-align:right;max-width:105px}}
 @media(hover:none){.cursor{display:none}.hero-wordmark{cursor:pointer}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.js .reveal,.js .reveal-text{opacity:1;transform:none}.ticker>div{animation:none}}
+
+/* Editorial dark visual refresh */
+:root{--bg:#10110f;--ink:#f0f0e9;--muted:#999d91;--line:rgba(240,240,233,.17);--lime:#c7f36b;--font:'Space Grotesk',sans-serif}
+body{background:var(--bg);color:var(--ink);font-family:var(--font)}

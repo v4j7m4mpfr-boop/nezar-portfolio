@@ -590,3 +590,20 @@ footer .back-top:hover{background:#245BFF;border-color:#245BFF;color:#fff;transf
  .contact-link{min-height:46px;padding:0 16px;font-size:8px}
  .contact-bottom{padding-top:15px;gap:16px;line-height:1.6}
 }
+
+
+/* Ticker separators — replace decorative symbols with a quiet geometric mark */
+.ticker b{
+ display:block;
+ flex:0 0 7px;
+ width:7px;
+ height:7px;
+ padding:0;
+ border:1px solid #668CFF;
+ border-radius:1px;
+ background:transparent;
+ transform:rotate(45deg);
+ font-size:0;
+ line-height:0;
+}
+@media(max-width:760px){.ticker b{flex-basis:6px;width:6px;height:6px}}

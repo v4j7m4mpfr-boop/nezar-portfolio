@@ -60,7 +60,7 @@
   $("#skill-list").innerHTML = S.skills.map(s => '<li class="reveal"><strong>'+esc(s.name)+'</strong><span>'+esc(s.note)+'</span></li>').join("");
   const links = [["Instagram",S.instagram,"@nezar.elsawy__"],["Email",S.email ? "mailto:"+S.email : "",S.email]];
   $("#links").innerHTML = links.map(([name,href,label]) => href ? '<a href="'+esc(href)+'" '+(name==="Instagram"?'target="_blank" rel="noopener"':'')+'><span>'+esc(name)+'</span><span>'+esc(label)+' ↗</span></a>' : "").join("");
-  if (S.email) $("#cta").href = "mailto:"+S.email+"?subject=Website%20project%20enquiry";
+  
 
   const observer = "IntersectionObserver" in window ? new IntersectionObserver(entries => entries.forEach(entry => {
     if (entry.isIntersecting) { entry.target.classList.add("visible"); observer.unobserve(entry.target); }

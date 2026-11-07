@@ -310,3 +310,36 @@ footer{border-color:rgba(199,203,212,.17)}
  .contact-panel .section-title{margin:6vh 0 4vh}
  .contact-bottom{margin-top:6vh}
 }
+
+
+/* Project showcase — three clean columns on desktop */
+.project-grid{
+ display:grid;
+ grid-template-columns:repeat(3,minmax(0,1fr));
+ column-gap:22px;
+ row-gap:42px;
+}
+.project-card,
+.project-card:nth-child(2n),
+.project-card:nth-child(3n),
+.project-card:nth-child(4n){
+ grid-column:auto;
+ margin-top:0;
+}
+.project-image,
+.project-card:nth-child(2n) .project-image{
+ aspect-ratio:1.18;
+}
+.project-info{align-items:flex-start}
+.project-info h3{font-size:clamp(19px,2vw,26px)}
+.project-type{font-size:7px}
+@media(max-width:900px){
+ .project-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 18px}
+ .project-image,.project-card:nth-child(2n) .project-image{aspect-ratio:1.2}
+}
+@media(max-width:600px){
+ .project-grid{grid-template-columns:1fr;row-gap:30px}
+ .project-image,.project-card:nth-child(2n) .project-image{aspect-ratio:1.35}
+ .project-info h3{font-size:24px}
+ .project-type{font-size:7px}
+}

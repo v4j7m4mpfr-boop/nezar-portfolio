@@ -501,3 +501,27 @@ body.modal-open{overflow:hidden}
 @media(max-width:760px){
  .about-section .about-grid{padding-top:18px}
 }
+
+
+/* Refined navigation cues and editorial ticker strip */
+.hero-foot{align-items:center;border-top:1px solid rgba(199,203,212,.16);padding-top:16px;color:#9299A8;font-family:'Space Grotesk',sans-serif;font-size:8px;font-weight:500;letter-spacing:.16em}
+.hero-foot span:first-child{display:inline-flex;align-items:center;gap:12px;padding:9px 13px;border:1px solid rgba(199,203,212,.22);border-radius:999px;color:#E7EAF1;letter-spacing:.12em;transition:border-color .25s,background .25s}
+.hero-foot span:first-child b{display:grid;place-items:center;width:19px;height:19px;margin:0;border-radius:50%;background:rgba(102,140,255,.14);color:#8EAAFF;font-size:12px;font-weight:400;transition:transform .25s,background .25s}
+.hero-foot span:first-child:hover{border-color:rgba(102,140,255,.65);background:rgba(102,140,255,.06)}
+.hero-foot span:first-child:hover b{transform:translateY(2px);background:rgba(102,140,255,.25)}
+.ticker{position:relative;overflow:hidden;padding:18px 0;border-block:1px solid rgba(199,203,212,.13);background:linear-gradient(90deg,rgba(36,91,255,.055),rgba(16,19,27,.15),rgba(36,91,255,.055));-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 7%,#000 93%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 7%,#000 93%,transparent 100%)}
+.ticker>div{align-items:center;gap:34px;animation-duration:42s}
+.ticker span{font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:500;letter-spacing:.2em;color:#C7CBD4}
+.ticker b{display:grid;place-items:center;width:17px;height:17px;border:1px solid rgba(102,140,255,.45);border-radius:50%;font-size:9px;font-weight:400;color:#8EAAFF}
+footer .back-top{display:inline-flex;align-items:center;gap:15px;padding:10px 14px;border:1px solid rgba(199,203,212,.24);border-radius:999px;color:#C7CBD4;font-family:'Space Grotesk',sans-serif;font-size:8px;font-weight:500;letter-spacing:.14em;transition:background .25s,border-color .25s,color .25s,transform .25s}
+footer .back-top:hover{background:#245BFF;border-color:#245BFF;color:#fff;transform:translateY(-2px)}
+@media(max-width:760px){
+ .hero-foot{padding-top:13px;font-size:7px;letter-spacing:.1em}
+ .hero-foot span:first-child{gap:8px;padding:8px 10px}
+ .hero-foot span:first-child b{width:17px;height:17px}
+ .ticker{padding:15px 0}
+ .ticker>div{gap:25px;animation-duration:36s}
+ .ticker span{font-size:8px;letter-spacing:.16em}
+ footer .back-top{padding:9px 12px;font-size:7px}
+}
+@media(prefers-reduced-motion:reduce){.ticker>div{animation:none}}

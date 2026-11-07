@@ -533,3 +533,60 @@ footer .back-top:hover{background:#245BFF;border-color:#245BFF;color:#fff;transf
 .project-card:hover .project-open svg{transform:translate(2px,-2px)}
 .project-card:hover .project-open{background:#245BFF;border-color:#245BFF;color:#fff;transform:translateY(-2px)}
 @media(max-width:600px){.project-open{width:38px;height:38px;border-radius:11px}.project-open svg{width:16px;height:16px}}
+
+
+/* Contact card — premium framed panel with a clear WhatsApp action */
+.contact-panel{
+ position:relative;
+ isolation:isolate;
+ overflow:hidden;
+ padding:clamp(28px,5.5vw,76px);
+ border:1px solid rgba(112,148,255,.28);
+ border-radius:26px;
+ background:
+  radial-gradient(ellipse at 88% 8%,rgba(36,91,255,.22),transparent 34%),
+  radial-gradient(ellipse at 0% 100%,rgba(36,91,255,.10),transparent 42%),
+  linear-gradient(145deg,#111725 0%,#0b0e17 58%,#10182c 100%);
+ box-shadow:0 24px 70px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.045);
+}
+.contact-panel:before{
+ content:"";
+ position:absolute;
+ z-index:-1;
+ width:clamp(180px,34vw,420px);
+ aspect-ratio:1;
+ right:-10%;
+ top:15%;
+ border:1px solid rgba(102,140,255,.13);
+ border-radius:50%;
+ box-shadow:0 0 0 28px rgba(102,140,255,.025),0 0 0 58px rgba(102,140,255,.018);
+ pointer-events:none;
+}
+.contact-top,.contact-bottom{position:relative;z-index:1;color:#AAB4CB}
+.contact-top span{font-size:8px;letter-spacing:.16em}
+.contact-top span:first-child{color:#E4EAF8}
+.contact-top span:last-child{color:#8EAAFF}
+.contact-panel .section-title{position:relative;z-index:1;color:#F2F4F8;letter-spacing:-.075em}
+.contact-panel .section-title .lime-dot{color:#668CFF}
+.contact-link{
+ position:relative;z-index:1;
+ display:inline-flex;align-items:center;justify-content:center;
+ min-height:48px;padding:0 21px;
+ border:1px solid rgba(142,170,255,.62);
+ border-radius:999px;
+ background:rgba(36,91,255,.12);
+ color:#F2F4F8;
+ font-family:'Space Grotesk',sans-serif;
+ font-size:9px;font-weight:500;letter-spacing:.13em;
+ transition:background .25s,border-color .25s,box-shadow .25s,transform .25s;
+}
+.contact-link:hover{background:#245BFF;border-color:#245BFF;color:#fff;box-shadow:0 8px 28px rgba(36,91,255,.25);transform:translateY(-2px)}
+.contact-hint{position:relative;z-index:1;max-width:430px;color:#AAB4CB}
+.contact-bottom{padding-top:18px;border-top:1px solid rgba(199,203,212,.14)}
+@media(max-width:760px){
+ .contact-panel{padding:26px 20px;border-radius:20px}
+ .contact-panel:before{right:-35%;top:23%;width:260px}
+ .contact-top span{font-size:7px;letter-spacing:.1em}
+ .contact-link{min-height:46px;padding:0 16px;font-size:8px}
+ .contact-bottom{padding-top:15px;gap:16px;line-height:1.6}
+}

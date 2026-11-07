@@ -125,3 +125,82 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font)}
 }
 @media(max-width:390px){.hero-name{font-size:18vw}.hero-intro-profile{gap:38px}.hero-undername span:last-child{display:none}}
 @media(prefers-reduced-motion:reduce){.hero-intro-profile .hero-kicker,.hero-name .name-line,.hero-undername,.hero-description{animation:none!important;transform:none!important;opacity:1!important}}
+
+
+/* Refined calm editorial direction — typography, layout and soft palette */
+:root{
+ --bg:#f5f4ef;--surface:#ebeae3;--ink:#242720;--muted:#777b70;
+ --line:rgba(36,39,32,.14);--lime:#9eae91;--font:'Space Grotesk',sans-serif;
+ --gutter:clamp(22px,6vw,96px);
+}
+body{background:var(--bg);color:var(--ink);font-family:'Space Grotesk',sans-serif}
+::selection{background:#d8e1d0;color:#242720}
+.grain{opacity:.012}
+.site-nav{padding-top:27px;padding-bottom:27px}
+.brand-symbol{font-family:'Syne',sans-serif;font-size:29px}
+.brand-symbol span,.footer-name span{color:#8b9d7d}
+.brand-name{letter-spacing:.12em;color:#34372f}
+.nav-status{color:#777b70}
+.nav-status i{background:#8b9d7d;box-shadow:0 0 0 4px #8b9d7d1c}
+.menu-toggle{border-color:#d3d4cb;color:#242720}
+.menu-toggle span{background:#242720;box-shadow:0 5px 0 #242720}
+.menu-toggle:hover{background:#e8e9e1;border-color:#a5b39b}
+.mobile-menu{background:#f1f0e9;color:#242720}
+.mobile-menu>a{border-color:#d9d9d0}
+.mobile-menu>a span{color:#8b9d7d}
+.hero{background:radial-gradient(ellipse at 83% 23%,rgba(205,215,198,.32),transparent 35%)}
+.hero-meta,.hero-foot,.hero-undername{color:#777b70}
+.hero-intro-profile .hero-kicker{color:#777b70}
+.hero-name{font-family:'Syne',sans-serif;font-weight:700;letter-spacing:-.105em;color:#22251f}
+.hero-name .lime-dot{color:#8b9d7d}
+.hero-description .hero-bio{color:#55594f}
+.hero-description .pill-link{border-color:#c7c9be;color:#242720}
+.hero-description .pill-link span{color:#8b9d7d}
+.hero-description .pill-link:hover{background:#242720;border-color:#242720;color:#f5f4ef}
+.hero-description .pill-link:hover span{color:#d5dfcc}
+.ticker{border-color:var(--line)}
+.ticker span{color:#65695f}
+.ticker b{color:#8b9d7d}
+.section-head{color:#777b70}
+.section-head span:first-child{color:#242720}
+.section-title em{color:#8b9d7d}
+.lead{color:#30332c}
+.body-copy{color:#777b70}
+.text-link span{color:#8b9d7d}
+.about-stats strong{color:#30332c}
+.about-stats span{color:#777b70}
+.project-image{background:#e3e3db;border-radius:10px}
+.project-image img{filter:saturate(.78) contrast(.96)}
+.project-image:after{border-color:rgba(36,39,32,.08)}
+.project-number{background:rgba(245,244,239,.78);color:#242720;border-color:rgba(36,39,32,.15);backdrop-filter:blur(12px)}
+.project-open{background:rgba(245,244,239,.8);color:#242720;border-color:rgba(36,39,32,.2)}
+.project-card:hover .project-open{background:#8b9d7d;color:#fff;border-color:#8b9d7d}
+.project-info h3{font-family:'Syne',sans-serif;font-weight:600;letter-spacing:-.045em}
+.project-info p,.project-type{color:#777b70}
+.project-card:hover .project-type{color:#788a6b}
+.work-footnote{color:#777b70}
+.work-footnote span{color:#8b9d7d}
+.skill-list li{border-color:var(--line)}
+.skill-list strong{color:#30332c}
+.skill-list span{color:#777b70}
+.manifesto{background:#eeede6;border-color:#d9d9d0;border-radius:12px}
+.manifesto strong{font-family:'Syne',sans-serif;color:#30332c}
+.manifesto strong em{color:#8b9d7d}
+.manifesto-index,.manifesto>span:first-child{color:#777b70}
+.contact-panel{background:#dfe5d9;color:#242720;border-radius:14px}
+.contact-panel .section-title em{color:#84957a}
+.contact-link{border-color:rgba(36,39,32,.35)}
+.contact-link:hover{background:#242720;color:#dfe5d9}
+.contact-top,.contact-bottom{color:#62685c}
+.social-links a:hover{color:#8b9d7d}
+footer{border-color:var(--line);color:#777b70}
+.footer-name{color:#242720}
+.back-top:hover{color:#8b9d7d}
+.cursor{background:#8b9d7d;mix-blend-mode:multiply}
+.skip{background:#dfe5d9;color:#242720}
+:focus-visible{outline-color:#8b9d7d}
+@media(max-width:760px){
+ .hero{background:radial-gradient(ellipse at 90% 16%,rgba(205,215,198,.28),transparent 38%)}
+ .project-info h3{font-size:clamp(20px,6vw,27px)}
+ .contact-panel{border-radius:10px}
+}

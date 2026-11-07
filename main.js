@@ -47,7 +47,7 @@
     '<article class="project-card reveal">'+
       '<button class="project-card-trigger" type="button" data-project="'+esc(p.id)+'" aria-label="View '+esc(p.title)+' case study">'+
         '<span class="project-image"><img src="'+esc(p.image || "")+'" alt="'+esc(p.title)+' website preview" loading="lazy"><span class="project-number">0'+(i+1)+' / 06</span><span class="project-open" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15L15 5M6 5H15V14" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>'+
-        '<span class="project-info"><span class="project-title-group"><strong>'+esc(p.title)+'</strong><span>'+esc(p.category)+'</span></span><span class="project-type">VIEW CASE STUDY ↗</span></span>'+
+        '<span class="project-info"><span class="project-title-group"><strong>'+esc(p.title)+'</strong><span>'+esc(p.category)+'</span></span></span>'+
       '</button>'+
     '</article>'
   ).join("");

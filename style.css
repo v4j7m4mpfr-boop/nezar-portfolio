@@ -343,3 +343,30 @@ footer{border-color:rgba(199,203,212,.17)}
  .project-info h3{font-size:24px}
  .project-type{font-size:7px}
 }
+
+
+/* Project action — refined outlined pill */
+.project-type{
+ display:inline-flex;
+ align-items:center;
+ justify-content:center;
+ gap:7px;
+ padding:9px 12px;
+ border:1px solid rgba(199,203,212,.28);
+ border-radius:999px;
+ color:#C7CBD4;
+ font-size:7px;
+ line-height:1;
+ letter-spacing:.12em;
+ white-space:nowrap;
+ transition:background .25s,border-color .25s,color .25s,transform .25s;
+}
+.project-card:hover .project-type{
+ background:#245BFF;
+ border-color:#245BFF;
+ color:#fff;
+ transform:translateY(-2px);
+}
+@media(max-width:390px){
+ .project-type{padding:8px 10px;font-size:6.5px}
+}

@@ -10,7 +10,7 @@ window.PROJECTS = [
   },
   {
     id:"fashion",title:"Velturi",category:"FASHION / E-COMMERCE CONCEPT",
-    image:"https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1400&q=85",
+    image:"https://image.thum.io/get/width/900/crop/650/noanimate/https://nezar-portfolio.pages.dev/projects/velturi/",
     summary:"A contemporary fashion storefront with an editorial attitude and a considered shopping experience.",
     note:"An independent concept project created to explore fashion e-commerce, art direction, and product discovery.",
     tags:["HTML","CSS","JavaScript","E-commerce UI"],live:"projects/velturi/",
@@ -18,7 +18,7 @@ window.PROJECTS = [
   },
   {
     id:"restaurant",title:"Sorella",category:"HOSPITALITY / RESTAURANT WEBSITE",
-    image:"https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=85",
+    image:"https://image.thum.io/get/width/900/crop/650/noanimate/https://nezar-portfolio.pages.dev/projects/sorella/",
     summary:"A modern Italian dining destination brought to life through warm tones, bold type, and a menu-first experience.",
     note:"An independent restaurant website concept. Restaurant identity, menu, and details are fictional.",
     tags:["HTML","CSS","JavaScript","Responsive design"],live:"projects/sorella/",
@@ -26,7 +26,7 @@ window.PROJECTS = [
   },
   {
     id:"dashboard",title:"Northstar",category:"SAAS / ADMIN DASHBOARD",
-    image:"https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=85",
+    image:"https://image.thum.io/get/width/900/crop/650/noanimate/https://nezar-portfolio.pages.dev/projects/northstar/",
     summary:"A focused operations dashboard that turns business activity into a clear, readable daily overview.",
     note:"An independent dashboard concept using sample data for demonstration. No real customer or business data is shown.",
     tags:["HTML","CSS","JavaScript","Dashboard UI"],live:"projects/northstar/",

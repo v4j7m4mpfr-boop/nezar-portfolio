@@ -494,3 +494,10 @@ body.modal-open{overflow:hidden}
  .contact-hint{font-size:10px}
 }
 @media(prefers-reduced-motion:reduce){.project-modal-panel,.project-modal{transition:none}}
+
+
+/* Tighten the space directly below the About section labels */
+.about-section .about-grid{padding-top:20px}
+@media(max-width:760px){
+ .about-section .about-grid{padding-top:18px}
+}

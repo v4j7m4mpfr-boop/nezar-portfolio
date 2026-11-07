@@ -269,3 +269,44 @@ footer{border-color:rgba(199,203,212,.17)}
 /* Fix duplicated hamburger mark: keep a single two-line menu icon */
 .menu-toggle span:nth-child(2){display:none!important}
 .menu-toggle span:first-child{width:15px;height:1px;flex:0 0 15px;box-shadow:0 5px 0 currentColor}
+
+
+/* Tighter editorial rhythm — remove oversized empty gaps */
+:root{--section-space:clamp(64px,7.5vw,108px)}
+.section{padding-top:var(--section-space);padding-bottom:var(--section-space)}
+.about-grid,.expertise-grid{gap:5vw;padding:46px 0 34px}
+.about-copy .lead,.expertise-grid .lead{line-height:1.38}
+.body-copy{margin-top:14px;line-height:1.72}
+.text-link{margin-top:19px}
+.about-stats>div{padding-top:15px;padding-bottom:15px}
+.work-section{padding-top:48px}
+.work-heading{padding:42px 0 28px}
+.project-grid{row-gap:48px}
+.work-footnote{margin-top:38px}
+.expertise-grid{padding-top:46px;padding-bottom:34px}
+.skill-list{margin-top:24px}
+.skill-list li{padding:12px 0}
+.manifesto{padding:28px}
+.manifesto strong{margin-top:26px}
+.contact-panel{margin-top:38px}
+.contact-panel .section-title{margin:7vh 0 5vh}
+.contact-bottom{margin-top:7vh}
+.social-links{margin-top:10px}
+@media(max-width:760px){
+ .section{padding-top:58px;padding-bottom:58px}
+ .about-grid,.expertise-grid{gap:22px;padding:34px 0 27px}
+ .body-copy{margin-top:11px;line-height:1.65}
+ .text-link{margin-top:16px}
+ .about-stats>div{padding-top:12px;padding-bottom:12px}
+ .work-section{padding-top:42px}
+ .work-heading{padding:34px 0 23px}
+ .project-grid{row-gap:30px}
+ .work-footnote{margin-top:28px}
+ .expertise-grid{padding-top:34px;padding-bottom:27px}
+ .skill-list{margin-top:20px}
+ .manifesto{padding:22px}
+ .manifesto strong{margin-top:22px}
+ .contact-panel{margin-top:28px}
+ .contact-panel .section-title{margin:6vh 0 4vh}
+ .contact-bottom{margin-top:6vh}
+}

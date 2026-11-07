@@ -264,3 +264,8 @@ footer{border-color:rgba(199,203,212,.17)}
  .hero{background:radial-gradient(ellipse at 88% 14%,rgba(36,91,255,.16),transparent 40%),#050609}
  .contact-panel{border-radius:12px}
 }
+
+
+/* Fix duplicated hamburger mark: keep a single two-line menu icon */
+.menu-toggle span:nth-child(2){display:none!important}
+.menu-toggle span:first-child{width:15px;height:1px;flex:0 0 15px;box-shadow:0 5px 0 currentColor}

@@ -204,3 +204,63 @@ footer{border-color:var(--line);color:#777b70}
  .project-info h3{font-size:clamp(20px,6vw,27px)}
  .contact-panel{border-radius:10px}
 }
+
+
+/* NEZAR WEB STUDIO — brand identity: midnight / chrome / electric blue */
+:root{
+ --bg:#050609;--surface:#10131B;--ink:#F2F4F8;--muted:#9299A8;
+ --line:rgba(199,203,212,.17);--lime:#245BFF;--font:'Space Grotesk',sans-serif;
+}
+html,body{background:#050609!important;color:#F2F4F8}
+body{font-family:'Space Grotesk',sans-serif}
+::selection{background:#245BFF;color:#fff}
+.grain{opacity:.045}
+.site-nav{background:rgba(5,6,9,.72);border-color:rgba(199,203,212,.14)}
+.brand-symbol,.brand-name,.nav-status,.hero-meta,.hero-foot,.hero-undername{color:#C7CBD4}
+.brand-symbol span,.footer-name span{color:#668CFF}
+.nav-status i{background:#245BFF;box-shadow:0 0 0 4px rgba(36,91,255,.2)}
+.menu-toggle{border-color:rgba(199,203,212,.3);color:#F2F4F8}
+.menu-toggle span{background:#F2F4F8;box-shadow:0 5px 0 #F2F4F8}
+.menu-toggle:hover{background:#10131B;border-color:#245BFF}
+.mobile-menu{background:#10131B;color:#F2F4F8}
+.mobile-menu>a{border-color:rgba(199,203,212,.16)}
+.mobile-menu>a span{color:#668CFF}
+.hero{background:radial-gradient(ellipse at 78% 24%,rgba(36,91,255,.16),transparent 38%),#050609}
+.hero-intro-profile .hero-kicker,.hero-description .hero-role{color:#9299A8}
+.hero-name{font-family:'Space Grotesk',sans-serif;color:#F2F4F8}
+.hero-name .lime-dot,.section-title em{color:#668CFF}
+.hero-description .hero-bio{color:#C7CBD4}
+.hero-description .pill-link{border-color:rgba(199,203,212,.35);color:#F2F4F8}
+.hero-description .pill-link span{color:#668CFF}
+.hero-description .pill-link:hover{background:#245BFF;border-color:#245BFF;color:#fff}
+.hero-description .pill-link:hover span{color:#fff}
+.ticker{border-color:rgba(199,203,212,.17)}
+.ticker span,.section-head,.body-copy,.project-info p,.project-type,.work-footnote,.about-stats span{color:#9299A8}
+.ticker b,.text-link span,.work-footnote span{color:#668CFF}
+.section-head span:first-child,.lead,.about-stats strong,.skill-list strong{color:#F2F4F8}
+.project-image{background:#10131B;border-radius:12px}
+.project-image img{filter:saturate(.9) contrast(1.02)}
+.project-image:after{border-color:rgba(199,203,212,.15)}
+.project-number,.project-open{background:rgba(16,19,27,.82);color:#F2F4F8;border-color:rgba(199,203,212,.25);backdrop-filter:blur(14px)}
+.project-card:hover .project-open{background:#245BFF;color:#fff;border-color:#245BFF}
+.project-info h3{font-family:'Space Grotesk',sans-serif;color:#F2F4F8}
+.skill-list li{border-color:rgba(199,203,212,.17)}
+.manifesto{background:linear-gradient(135deg,#10131B,#0b1020);border-color:rgba(199,203,212,.16);border-radius:14px}
+.manifesto strong{font-family:'Space Grotesk',sans-serif;color:#F2F4F8}
+.manifesto strong em{color:#668CFF}
+.manifesto-index,.manifesto>span:first-child{color:#9299A8}
+.contact-panel{background:linear-gradient(135deg,#10131B 0%,#111b38 100%);color:#F2F4F8;border:1px solid rgba(102,140,255,.28);border-radius:14px}
+.contact-panel .section-title em{color:#668CFF}
+.contact-link{border-color:rgba(199,203,212,.35);color:#F2F4F8}
+.contact-link:hover{background:#245BFF;color:#fff}
+.contact-top,.contact-bottom,footer{color:#9299A8}
+footer{border-color:rgba(199,203,212,.17)}
+.footer-name{color:#F2F4F8}
+.social-links a:hover,.back-top:hover{color:#668CFF}
+.cursor{background:#245BFF;mix-blend-mode:screen}
+.skip{background:#10131B;color:#F2F4F8}
+:focus-visible{outline-color:#668CFF}
+@media(max-width:760px){
+ .hero{background:radial-gradient(ellipse at 88% 14%,rgba(36,91,255,.16),transparent 40%),#050609}
+ .contact-panel{border-radius:12px}
+}

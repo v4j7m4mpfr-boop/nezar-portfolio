@@ -58,8 +58,13 @@
   modal.addEventListener("click",e=>{if(e.target===modal)closeProject();});
 
   $("#skill-list").innerHTML = S.skills.map(s => '<li class="reveal"><strong>'+esc(s.name)+'</strong><span>'+esc(s.note)+'</span></li>').join("");
-  const links = [["Instagram",S.instagram,"@nezar.elsawy__"],["Email",S.email ? "mailto:"+S.email : "",S.email]];
-  $("#links").innerHTML = links.map(([name,href,label]) => href ? '<a href="'+esc(href)+'" '+(name==="Instagram"?'target="_blank" rel="noopener"':'')+'><span>'+esc(name)+'</span><span>'+esc(label)+' ↗</span></a>' : "").join("");
+  const instagramIcon='<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7"/><circle cx="17.7" cy="6.8" r="1" fill="currentColor"/></svg>';
+  const emailIcon='<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.7"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  const links = [
+    {name:"Instagram",href:S.instagram,label:"@nezar.elsawy__",icon:instagramIcon},
+    {name:"Email",href:S.email ? "mailto:"+S.email : "",label:S.email,icon:emailIcon}
+  ];
+  $("#links").innerHTML = links.map(item => item.href ? '<a href="'+esc(item.href)+'" '+(item.name==="Instagram"?'target="_blank" rel="noopener"':'')+'><span class="social-link-main"><span class="social-link-icon">'+item.icon+'</span><span class="social-link-copy"><strong>'+esc(item.name)+'</strong><small>'+esc(item.label)+'</small></span></span><span class="social-link-arrow" aria-hidden="true">↗</span></a>' : "").join("");
   
 
   const observer = "IntersectionObserver" in window ? new IntersectionObserver(entries => entries.forEach(entry => {

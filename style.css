@@ -902,3 +902,4 @@ body.menu-open{overflow:hidden}
 @media(prefers-reduced-motion:reduce){
  .mobile-menu>a{transition:none}
 }
+\n/* NEZAR WEB STUDIO — chrome monogram */\n.brand{gap:13px}.brand-mark{display:block;width:37px;height:37px;flex:0 0 37px;filter:drop-shadow(0 0 9px rgba(79,156,255,.18));transition:transform .35s ease,filter .35s ease}.brand:hover .brand-mark{transform:rotate(-5deg) scale(1.06);filter:drop-shadow(0 0 13px rgba(79,156,255,.42))}.brand-name{font-size:9px;letter-spacing:.17em;color:#e8edf5}.footer-name{display:inline-flex;align-items:center;gap:10px}.footer-mark{width:30px;height:30px;flex:0 0 30px;filter:drop-shadow(0 0 7px rgba(79,156,255,.2))}@media(max-width:760px){.brand-mark{width:34px;height:34px;flex-basis:34px}.brand-name{font-size:8px;letter-spacing:.13em}.footer-mark{width:26px;height:26px;flex-basis:26px}}\n

@@ -4,13 +4,19 @@
   const S = window.SITE || {skills:[],email:"",instagram:""};
   const P = window.PROJECTS || [];
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  $("#year").textContent = new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
+  $("#year").textContent = currentYear;
+  const copyrightYear = $("#copyright-year");
+  if (copyrightYear) copyrightYear.textContent = currentYear;
 
   const menuBtn = $(".menu-toggle"), mobileMenu = $("#mobile-menu");
   const setMenu = (open) => {
     mobileMenu.classList.toggle("open", open);
+    document.body.classList.toggle("menu-open", open);
     menuBtn.setAttribute("aria-expanded", String(open));
     menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    if (open) mobileMenu.querySelector("a")?.focus();
+    else menuBtn.focus();
   };
   menuBtn.addEventListener("click", () => setMenu(menuBtn.getAttribute("aria-expanded") !== "true"));
   mobileMenu.addEventListener("click", e => { if (e.target.closest("a")) setMenu(false); });
@@ -19,14 +25,17 @@
   const esc = value => String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const modal = $("#project-modal");
   const modalContent = $("#project-modal-content");
+  let lastProjectTrigger = null;
   const closeProject = () => {
     if (!modal) return;
     modal.classList.remove("open");
     modal.setAttribute("aria-hidden","true");
     document.body.classList.remove("modal-open");
+    if (lastProjectTrigger) lastProjectTrigger.focus();
   };
-  const openProject = p => {
+  const openProject = (p, trigger) => {
     if (!modal || !p) return;
+    lastProjectTrigger = trigger || document.activeElement;
     const external = /^https?:\/\//i.test(p.live);
     modalContent.innerHTML =
       '<div class="project-modal-visual"><img src="'+esc(p.image || "")+'" alt="'+esc(p.title)+' website preview"><span>'+esc(p.category)+'</span></div>'+
@@ -42,18 +51,19 @@
     modal.setAttribute("aria-hidden","false");
     document.body.classList.add("modal-open");
     modal.querySelector(".project-modal-close").addEventListener("click",closeProject);
+    modal.querySelector(".project-modal-close").focus();
   };
   $("#projects").innerHTML = P.map((p, i) =>
     '<article class="project-card reveal">'+
       '<button class="project-card-trigger" type="button" data-project="'+esc(p.id)+'" aria-label="View '+esc(p.title)+' case study">'+
-        '<span class="project-image"><img src="'+esc(p.image || "")+'" alt="'+esc(p.title)+' website preview" loading="lazy"><span class="project-number">0'+(i+1)+' / 06</span><span class="project-open" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15L15 5M6 5H15V14" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>'+
+        '<span class="project-image"><img src="'+esc(p.image || "")+'" alt="'+esc(p.title)+' website preview" loading="lazy" decoding="async"><span class="project-number">0'+(i+1)+' / 06</span><span class="project-open" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15L15 5M6 5H15V14" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>'+
         '<span class="project-info"><span class="project-title-group"><strong>'+esc(p.title)+'</strong><span>'+esc(p.category)+'</span></span></span>'+
       '</button>'+
     '</article>'
   ).join("");
   $("#projects").addEventListener("click", e => {
     const trigger = e.target.closest("[data-project]");
-    if (trigger) openProject(P.find(p => p.id === trigger.dataset.project));
+    if (trigger) openProject(P.find(p => p.id === trigger.dataset.project), trigger);
   });
   modal.addEventListener("click",e=>{if(e.target===modal)closeProject();});
 

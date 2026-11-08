@@ -753,3 +753,10 @@ html{scroll-behavior:smooth}
 .social-link-arrow{font-size:13px;color:#8EAAFF;transition:transform .3s}
 .social-links a:hover .social-link-arrow{transform:translate(3px,-3px)}
 @media(max-width:760px){.social-links{grid-template-columns:1fr;gap:10px}.social-links a{padding:14px 15px;border-radius:12px}.social-link-icon{width:38px;height:38px;flex-basis:38px}}
+
+
+/* Copyright / ownership footer */
+.site-footer{padding-bottom:22px}
+.footer-main{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.footer-legal{display:flex;justify-content:space-between;gap:16px;margin-top:22px;padding-top:12px;border-top:1px solid rgba(199,203,212,.12);color:rgba(170,180,203,.62);font-size:7px;letter-spacing:.12em;line-height:1.7}
+@media(max-width:760px){.footer-main{flex-wrap:wrap;gap:14px}.footer-legal{flex-direction:column;gap:4px;font-size:6.5px;letter-spacing:.08em}}

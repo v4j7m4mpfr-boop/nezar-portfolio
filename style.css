@@ -760,3 +760,34 @@ html{scroll-behavior:smooth}
 .footer-main{display:flex;align-items:center;justify-content:space-between;gap:20px}
 .footer-legal{display:flex;justify-content:space-between;gap:16px;margin-top:22px;padding-top:12px;border-top:1px solid rgba(199,203,212,.12);color:rgba(170,180,203,.62);font-size:7px;letter-spacing:.12em;line-height:1.7}
 @media(max-width:760px){.footer-main{flex-wrap:wrap;gap:14px}.footer-legal{flex-direction:column;gap:4px;font-size:6.5px;letter-spacing:.08em}}
+
+
+/* Social app-link arrow — replace the generic northeast arrow with a sleek chevron */
+.social-link-arrow{
+ display:grid;
+ place-items:center;
+ width:28px;height:28px;
+ border:1px solid rgba(142,170,255,.22);
+ border-radius:50%;
+ font-size:0;
+ color:#AFC2FF;
+}
+.social-link-arrow:before{
+ content:"";
+ width:6px;height:6px;
+ border-top:1.4px solid currentColor;
+ border-right:1.4px solid currentColor;
+ transform:rotate(45deg) translate(-1px,1px);
+ transition:transform .3s ease;
+}
+.social-link-arrow:after{
+ content:"";
+ position:absolute;
+ width:10px;height:1px;
+ background:currentColor;
+ transform:translate(-1px,1px);
+ transition:transform .3s ease;
+}
+.social-link-arrow{position:relative}
+.social-links a:hover .social-link-arrow:before{transform:rotate(45deg) translate(1px,-1px)}
+.social-links a:hover .social-link-arrow:after{transform:translate(1px,-1px)}

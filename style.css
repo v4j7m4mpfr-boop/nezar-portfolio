@@ -791,3 +791,41 @@ html{scroll-behavior:smooth}
 .social-link-arrow{position:relative}
 .social-links a:hover .social-link-arrow:before{transform:rotate(45deg) translate(1px,-1px)}
 .social-links a:hover .social-link-arrow:after{transform:translate(1px,-1px)}
+
+
+/* Social cards: elegant diagonal arrow, custom-drawn and minimal */
+.social-link-arrow{
+ width:34px;height:34px;
+ border:1px solid rgba(142,170,255,.2);
+ border-radius:10px;
+ background:rgba(36,91,255,.055);
+ color:#9FB5FF;
+ font-size:0;
+ overflow:hidden;
+}
+.social-link-arrow:before{
+ content:"";
+ position:absolute;
+ width:10px;height:10px;
+ top:10px;right:10px;
+ border-top:1.5px solid currentColor;
+ border-right:1.5px solid currentColor;
+ transform:rotate(0deg);
+ transition:transform .35s cubic-bezier(.2,.7,.2,1),top .35s,right .35s;
+}
+.social-link-arrow:after{
+ content:"";
+ position:absolute;
+ width:13px;height:1.5px;
+ top:16px;left:9px;
+ background:currentColor;
+ transform:rotate(-45deg);
+ transform-origin:center;
+ transition:transform .35s cubic-bezier(.2,.7,.2,1),left .35s,top .35s;
+}
+.social-links a:hover .social-link-arrow{
+ background:rgba(36,91,255,.18);
+ border-color:rgba(142,170,255,.5);
+}
+.social-links a:hover .social-link-arrow:before{top:8px;right:8px}
+.social-links a:hover .social-link-arrow:after{left:12px;top:13px;transform:rotate(-45deg) scaleX(1.12)}

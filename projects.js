@@ -1,7 +1,7 @@
 window.PROJECTS = [
   {
     id:"novadental",title:"NovaDental",category:"HEALTHCARE / LANDING PAGE",
-    image:"https://image.thum.io/get/width/600/crop/900/noanimate/https://v4j7m4mpfr-boop.github.io/dental-clinic-landing-page/",
+    image:"https://image.thum.io/get/width/900/crop/650/noanimate/https://v4j7m4mpfr-boop.github.io/dental-clinic-landing-page/",
     summary:"A refined digital presence for a modern dental clinic, built around trust, clarity, and a calm visual language.",
     note:"An independent concept project. Brand, clinic details, testimonials, and contact information are fictional.",
     tags:["HTML","CSS","Responsive design"],
@@ -34,7 +34,7 @@ window.PROJECTS = [
   },
   {
     id:"travel",title:"Elsewhere",category:"TRAVEL / BOOKING EXPERIENCE",
-    image:"https://image.thum.io/get/width/600/crop/900/noanimate/https://nezar-portfolio.pages.dev/projects/elsewhere/",
+    image:"https://image.thum.io/get/width/900/crop/650/noanimate/https://nezar-portfolio.pages.dev/projects/elsewhere/",
     summary:"A travel discovery and booking concept designed to make the next destination feel one step closer.",
     note:"An independent travel platform concept. Destinations and sample prices are illustrative; no bookings are processed.",
     tags:["HTML","CSS","JavaScript","Booking UI"],live:"projects/elsewhere/",
@@ -42,7 +42,7 @@ window.PROJECTS = [
   },
   {
     id:"playground",title:"Playform",category:"DIGITAL LAB / INTERACTIVE PLAYGROUND",
-    image:"https://image.thum.io/get/width/600/crop/900/noanimate/https://nezar-portfolio.pages.dev/projects/playform/",
+    image:"https://image.thum.io/get/width/900/crop/650/noanimate/https://nezar-portfolio.pages.dev/projects/playform/",
     summary:"A small digital playground for motion, type, color, and playful interactions.",
     note:"An independent experimental project built to explore creative coding and interaction design.",
     tags:["HTML","CSS","JavaScript","Creative coding"],live:"projects/playform/",
